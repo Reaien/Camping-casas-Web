@@ -1,0 +1,170 @@
+:root{
+    --negro: #000000;
+    --blanc: #ffffff;
+    --gris: #252525;
+    --verde: rgb(49, 110, 41);
+    --cafe: rgba(104, 67, 36, 0.933);
+    --fuentePrincipal: 'Lora', serif;
+}
+
+
+/*globales*/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+h1, h2, h3{
+    font-weight: 400;
+    margin: 1rem 0 4rem 0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+
+/*utilidades*/
+
+.contenedor{
+    max-width: 120rem; /*max-width permite que una imagen solo pueda estirarse a un maximo*/
+    width: 90%; /*width indica que tomara el 90% de lo que hay disponible*/
+    margin: 0 auto;
+}
+
+.btn{
+    color: var(--blanc);
+    background-color: var(--cafe);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color .3s;
+}
+
+.btn:hover{
+    background-color: var(--verde);
+    color: var(--negro);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mt5{
+    margin-top: 5rem;
+}
+
+/*header*/
+.header{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 60rem;
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .header{
+        padding: 2rem 0;
+    }
+}
+
+.contenido-header{ /*crear columna con flex crea 1 columna la cual puede separar hacia abajo distintos divs dentro del flex determinando la altura de este column*/
+    display: flex;
+    flex-direction: column;
+    height: 54rem;
+    justify-content: space-between;
+    color: var(--blanc);
+}
+
+.nombre-sitio{
+    font-size: 3.8rem;
+    padding-top: 4rem;
+    width: 10%;
+}
+@media (min-width: 768px) {
+    .nombre-sitio{
+        font-size: 4.5rem;
+    }
+}
+.nombre-sitio span{
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .contacto{
+        align-items: flex-end;
+        gap: 12rem;
+    }
+}
+
+.telefono{
+    display: flex;
+}
+.telefono::before{
+    content: '';
+    width: 4rem;
+    height: 2rem;
+    display: block;
+    background-image: url(../img/wsspp.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header a{
+    color: var(--blanc);
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+    }
+}
+
+.navegacion a{
+    transition: background-color .2s;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.navegacion a:hover {
+    background-color: rgba(255, 187, 0, 0.514);
+    padding: 1rem;
+}
+
