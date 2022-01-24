@@ -190,6 +190,23 @@ a{
         font-size: 4rem;
     }
 }
-.slogan p{
 
+/*sobre nosotros*/
+
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+}
+.contenido-nosotros{
+    background-color: var(--blanc);
+    padding: 5rem;
+}
+
+.contenido-nosotros h2{
+    line-height: 1.2;
+    font-weight: 700;
 }
