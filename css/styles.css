@@ -123,6 +123,7 @@ a{
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    width: 100%;
 }
 @media (min-width: 768px) {
     .contacto{
@@ -132,13 +133,13 @@ a{
 }
 
 .telefono{
-    display: flex;
+    display: flex; /*activamos el flex para que se alinee la imagen de telefono colocada en before y los numeros de fono*/
 }
-.telefono::before{
+.telefono::before{ /*el elemento before creara un elemento en el html para incluirle algo desde el css, en este caso creamos un elemento vacio al cual le asignaremos el icono de wssp*/
     content: '';
     width: 4rem;
     height: 2rem;
-    display: block;
+    display: block; /*ya que la clase telefono esta dentro de un display inline, no afecta el heigh y el width para dar forma al icono, para eso debemos aplicar displa:block, recuerda, eso hace que la imagen se junte con el elemento*/
     background-image: url(../img/wsspp.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -151,20 +152,44 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    text-align: center;
 }
 @media (min-width: 768px) {
     .navegacion{
         flex-direction: row;
+        justify-content: flex-end;
     }
 }
 
 .navegacion a{
     transition: background-color .2s;
-    border-radius: 1rem;
-    padding: 1rem;
+    border-radius: .3rem;
+    padding: .5rem;
+    width: 100%;
+}
+@media(min-width: 768px){
+    .navegacion a{
+        padding: 1rem 2rem;
+        max-width: 10rem;
+    }
 }
 .navegacion a:hover {
     background-color: rgba(255, 187, 0, 0.514);
-    padding: 1rem;
 }
 
+.slogan{
+    text-align: right;
+}
+.slogan h1{
+    margin: 0;
+    font-size: 3rem;
+}
+@media (min-width: 768px){
+    .slogan h1{
+        font-size: 4rem;
+    }
+}
+.slogan p{
+
+}
