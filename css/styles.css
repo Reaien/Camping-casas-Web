@@ -58,12 +58,12 @@ a{
     background-color: var(--cafe);
     border: 1px solid var(--gris);
     padding: .5rem 2rem;
+    max-width: 70%;
     transition: background-color .3s;
 }
 
 .btn:hover{
     background-color: var(--verde);
-    color: var(--negro);
 }
 
 .text-center{
@@ -199,14 +199,99 @@ a{
     background-image: url(../img/nosotros.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
-
 }
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .contenido-nosotros{
     background-color: var(--blanc);
-    padding: 5rem;
+    padding: 3rem;
+}
+@media (min-width: 768px) {
+    .contenido-nosotros{
+        grid-column: 2 / 4;
+        padding: 5rem;
+        border-bottom: 1px solid var(--gris);
+        border-left: 1px solid var(--gris);;
+    }
 }
 
 .contenido-nosotros h2{
     line-height: 1.2;
     font-weight: 700;
+}
+
+.contenido-nosotros p{
+    margin-bottom: 2rem;
+}
+
+/*principal main*/
+
+/*modelos*/
+.contenido-modelo h3{
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .titulo-modelos{
+        font-weight: bold;
+        padding-top: 10rem;
+        border-top: 1px solid var(--gris);
+    }
+}
+
+.modelo{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 150%;
+}
+@media (min-width: 768px) {
+    .modelo{
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 3rem;
+        margin-bottom: 5rem;
+        background-size: unset;
+    }
+}
+
+
+.contenido-modelo{
+    padding: 2rem;
+    background-color: var(--blanc);
+}
+@media (min-width: 768px) {
+    .basico-grid{
+        border-top: 1px solid var(--gris);
+        border-right: 1px solid var(--gris);
+    }
+}
+@media (min-width: 768px) {
+    .premier-grid{
+        grid-column: 3 / 4;
+        border-left: 1px solid var(--gris);
+        border-top: 1px solid var(--gris);
+    }
+}
+@media (min-width: 768px) {
+    .elite-grid{
+        grid-row: 2 / 3;
+        border-right: 1px solid var(--gris);
+        border-top: 1px solid var(--gris);
+    }
+}
+.basico{
+    background-image: url(../img/modelo_basico.jpg);
+}
+
+.premier{
+    background-image: url(../img/modelo_elite.jpg);
+}
+
+.elite{
+    background-image: url(../img/modelo_premier.jpg);
 }
