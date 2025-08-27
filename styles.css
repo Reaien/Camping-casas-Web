@@ -1,0 +1,393 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables CSS (equivalente a los colores de Tailwind) */
+:root {
+  --negro: #000000;
+  --blanco: #ffffff;
+  --gris: #252525;
+  --verde: rgb(49, 110, 41);
+  --cafe: rgba(104, 67, 36, 0.933);
+  --fuente-principal: "Lora", serif;
+}
+
+/* Estilos generales */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Contenedor general */
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  height: 54rem;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo h1 {
+  font-size: 6rem;
+  padding-top: 4rem;
+  color: var(--blanco);
+  font-weight: 400;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.telefono {
+  display: flex;
+  align-items: center;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.telefono img {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 0.8rem;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.navegacion a {
+  color: var(--blanco);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.navegacion a:hover {
+  background-color: rgba(255, 187, 0, 0.514);
+}
+
+.slogan {
+  text-align: right;
+}
+
+.slogan h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--blanco);
+  margin: 0;
+}
+
+.slogan p {
+  color: var(--blanco);
+}
+
+/* Sobre nosotros */
+.sobre-nosotros {
+  margin-top: 8rem;
+  position: relative;
+  min-height: 40rem;
+}
+
+.nosotros-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contenido-nosotros {
+  background-color: var(--blanco);
+  padding: 4.8rem;
+  border-bottom: 1px solid var(--gris);
+  border-left: 1px solid var(--gris);
+  margin-left: auto;
+  width: 66.666667%;
+  position: relative;
+  z-index: 10;
+}
+
+.contenido-nosotros h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 6rem;
+}
+
+.contenido-nosotros p {
+  margin-bottom: 3.2rem;
+}
+
+/* Modelos */
+.modelos {
+  margin-top: 8rem;
+}
+
+.titulo-modelos {
+  font-size: 6rem;
+  font-weight: 700;
+  padding-top: 16rem;
+  border-top: 1px solid var(--gris);
+  margin-bottom: 8rem;
+}
+
+.modelo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 4.8rem 0;
+  border-bottom: 1px solid var(--gris);
+}
+
+.modelo-img {
+  width: 100%;
+}
+
+.modelo-img img {
+  width: 100%;
+  height: 38.4rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.modelo-contenido {
+  width: 100%;
+  padding: 3.2rem;
+}
+
+.modelo-contenido h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.modelo-contenido p {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.btn {
+  color: var(--blanco);
+  background-color: var(--cafe);
+  border: 1px solid var(--gris);
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  background-color: var(--verde);
+}
+
+/* Galería */
+.galeria-section {
+  margin-top: 8rem;
+}
+
+.galeria-section h2 {
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 6rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.galeria img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.galeria .imagen:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.galeria .imagen:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 6;
+}
+
+.galeria .imagen:nth-child(6) {
+  grid-row: 2 / 5;
+  grid-column: 1 / 2;
+}
+
+/* Footer */
+.footer {
+  height: 50rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 8rem;
+}
+
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.footer .contenedor {
+  position: relative;
+  z-index: 10;
+}
+
+.copyright {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: 1.6rem;
+  margin-top: 8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Media Queries para Desktop */
+@media (min-width: 768px) {
+  .header {
+    padding: 3.2rem 0;
+  }
+
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo h1 {
+    font-size: 7rem;
+  }
+
+  .contacto {
+    align-items: flex-end;
+    gap: 19.2rem;
+  }
+
+  .navegacion {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navegacion a {
+    padding: 1.6rem 3.2rem;
+    max-width: 16rem;
+  }
+
+  .slogan h1 {
+    font-size: 6rem;
+  }
+
+  .contenido-nosotros h2 {
+    font-size: 8rem;
+  }
+
+  .titulo-modelos {
+    font-size: 8rem;
+  }
+
+  .modelo {
+    flex-direction: row;
+  }
+
+  .modelo-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .modelo-img {
+    width: 50%;
+  }
+
+  .modelo-contenido {
+    width: 50%;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria .imagen:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .galeria .imagen:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .galeria .imagen:nth-child(6) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+  }
+
+  .galeria-section h2 {
+    font-size: 8rem;
+  }
+}

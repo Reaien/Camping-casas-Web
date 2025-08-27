@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Camping Puerto Montt</title>
 </head>
+
 <body>
+    <!-- Header -->
     <header class="header">
-        <div class="contenedor contenido-header">
+        <img src="img/hero.jpg" alt="Camping background" class="header-bg">
+        <div class="contenedor header-content">
             <div class="barra">
                 <div class="logo">
-                    <h1 class="nombre-sitio">Camping <span>PuertoMontt</span></h1>
+                    <h1>Camping <span>PuertoMontt</span></h1>
                 </div>
                 <div class="contacto">
-                    <a class="telefono" href="">+56-9-2346-5945</a>
+                    <a class="telefono" href="">
+                        <img src="img/wsspp.png" alt="WhatsApp">
+                        +56-9-2346-5945
+                    </a>
                     <nav class="navegacion">
-                        <a class="link" href="#">Nosotros</a>
-                        <a class="link" href="#">Inicio</a>
-                        <a class="link" href="#">Modelos</a>
-                        <a class="link" href="#">Galería</a>
-                        <a class="link" href="#">Contacto</a>
+                        <a href="#">Nosotros</a>
+                        <a href="#">Inicio</a>
+                        <a href="#">Modelos</a>
+                        <a href="#">Galería</a>
+                        <a href="#">Contacto</a>
                     </nav>
                 </div>
             </div>
@@ -36,45 +42,72 @@
         </div>
     </header>
 
-    <section class="contenedor mt5 nosotros">
+    <!-- Sobre nosotros -->
+    <section class="contenedor sobre-nosotros">
+        <img src="img/nosotros.jpg" alt="Sobre nosotros" class="nosotros-bg">
         <div class="contenido-nosotros">
             <h2>Sobre nosotros</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt accusantium dolorem voluptatum explicabo quae ipsam ut impedit aliquam deleniti accusamus debitis quidem repudiandae tenetur, corrupti beatae rem dolor sequi?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia saepe possimus provident necessitatibus aperiam nulla quam quaerat non dolor totam, quod neque numquam debitis voluptates? Dolorem voluptatem inventore in est?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt accusantium dolorem
+                voluptatum explicabo quae ipsam ut impedit aliquam deleniti accusamus debitis quidem repudiandae
+                tenetur, corrupti beatae rem dolor sequi?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia saepe possimus provident necessitatibus
+                aperiam nulla quam quaerat non dolor totam, quod neque numquam debitis voluptates? Dolorem voluptatem
+                inventore in est?</p>
         </div>
     </section>
 
-    <main class="contenedor">
+    <!-- Modelos -->
+    <main class="contenedor modelos">
         <h2 class="titulo-modelos">Conoce nuestros modelos</h2>
-        <div class="modelo basico ">
-            <div class="contenido-modelo basico-grid">
-                <h3>Modelo basico</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae voluptatem ex, cum similique.</p>
-                <p class="btn">Mas Informacion</p>
-            </div>
-        </div> <!--modelo-->
 
-        <div class="modelo premier">
-            <div class="contenido-modelo premier-grid">
+        <!-- Modelo Básico -->
+        <div class="modelo">
+            <div class="modelo-img">
+                <img src="img/modelo_basico.jpg" alt="Modelo Básico">
+            </div>
+            <div class="modelo-contenido">
+                <h3>Modelo Básico</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi
+                    itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae
+                    voluptatem ex, cum similique.</p>
+                <button class="btn">Más Información</button>
+            </div>
+        </div>
+
+        <!-- Modelo Premier -->
+        <div class="modelo modelo-reverse">
+            <div class="modelo-img">
+                <img src="img/modelo_elite.jpg" alt="Modelo Premier">
+            </div>
+            <div class="modelo-contenido">
                 <h3>Modelo Premier</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae voluptatem ex, cum similique.</p>
-                <p class="btn">Mas Informacion</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi
+                    itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae
+                    voluptatem ex, cum similique.</p>
+                <button class="btn">Más Información</button>
             </div>
-        </div> <!--modelo-->
+        </div>
 
-        <div class="modelo elite">
-            <div class="contenido-modelo elite-grid">
-                <h3>Modelo Elite</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae voluptatem ex, cum similique.</p>
-                <p class="btn">Mas Informacion</p>
+        <!-- Modelo Elite -->
+        <div class="modelo">
+            <div class="modelo-img">
+                <img src="img/modelo_premier.jpg" alt="Modelo Elite">
             </div>
-        </div> <!--modelo-->
+            <div class="modelo-contenido">
+                <h3>Modelo Elite</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur maiores odio modi
+                    itaque saepe enim esse repellendus? Accusamus libero harum quam laudantium omnis eaque recusandae
+                    voluptatem ex, cum similique.</p>
+                <button class="btn">Más Información</button>
+            </div>
+        </div>
     </main>
 
-    <section class="contenedor">
-        <h2>Galeria</h2>
+    <!-- Galería -->
+    <section class="contenedor galeria-section">
+        <h2>Galería</h2>
         <div class="galeria">
-            <div class="imagen" >
+            <div class="imagen">
                 <img src="img/imagen_1.jpg" alt="camping_casa">
             </div>
             <div class="imagen">
@@ -98,20 +131,25 @@
         </div>
     </section>
 
-    <footer class="footer mt5" >
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="img/footer_bg.jpg" alt="Footer background" class="footer-bg">
         <div class="contenedor">
             <div class="barra">
                 <div class="logo">
-                    <h1 class="nombre-sitio">Camping <span>PuertoMontt</span></h1>
+                    <h1>Camping <span>PuertoMontt</span></h1>
                 </div>
                 <div class="contacto">
-                    <a class="telefono" href="">+56-9-2346-5945</a>
+                    <a class="telefono" href="">
+                        <img src="img/wsspp.png" alt="WhatsApp">
+                        +56-9-2346-5945
+                    </a>
                     <nav class="navegacion">
-                        <a class="link" href="#">Nosotros</a>
-                        <a class="link" href="#">Inicio</a>
-                        <a class="link" href="#">Modelos</a>
-                        <a class="link" href="#">Galería</a>
-                        <a class="link" href="#">Contacto</a>
+                        <a href="#">Nosotros</a>
+                        <a href="#">Inicio</a>
+                        <a href="#">Modelos</a>
+                        <a href="#">Galería</a>
+                        <a href="#">Contacto</a>
                     </nav>
                 </div>
             </div>
@@ -123,4 +161,5 @@
     </footer>
 
 </body>
+
 </html>
